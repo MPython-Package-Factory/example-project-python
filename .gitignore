@@ -1,4 +1,5 @@
 **/*.asv
 .mpython/build
 .mpython/external
-build/**/*.egg-info
+build/
+**/*.egg-info
