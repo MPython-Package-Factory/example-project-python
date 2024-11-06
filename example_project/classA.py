@@ -11,7 +11,10 @@ class classA(MatlabClassWrapper):
                  doc classA  
             
           
+
+        [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/<rfilepath> )
         """
+
         if _objdict is None:
             _objdict = Runtime.call("classA", *args, **kwargs)
             
@@ -20,5 +23,8 @@ class classA(MatlabClassWrapper):
     def _private_method(self, *args, **kwargs):
         """
 
+
+        [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/<rfilepath> )
         """
+
         return Runtime.call("private_method", *args, **kwargs)
