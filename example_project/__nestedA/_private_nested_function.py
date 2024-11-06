@@ -7,7 +7,7 @@ def _private_nested_function(*args, **kwargs):
           Detailed explanation goes here  
       
 
-    [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/buildexample-project-matlabnestedAprivateprivate_nested_function.m )
+    [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/nestedA/private/private_nested_function.m )
     """
 
     return Runtime.call("private_nested_function", *args, **kwargs)
