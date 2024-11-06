@@ -7,7 +7,7 @@ def funcA(*args, **kwargs):
           Detailed explanation goes here  
       
 
-    [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/<rfilepath> )
+    [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/buildexample-project-matlabfuncA.m )
     """
 
     return Runtime.call("funcA", *args, **kwargs)

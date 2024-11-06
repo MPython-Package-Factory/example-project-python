@@ -12,7 +12,7 @@ class classA(MatlabClassWrapper):
             
           
 
-        [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/<rfilepath> )
+        [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/buildexample-project-matlab@classAclassA.m )
         """
 
         if _objdict is None:
@@ -24,7 +24,7 @@ class classA(MatlabClassWrapper):
         """
 
 
-        [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/<rfilepath> )
+        [Matlab code]( https://www.github.com/MPython-Package-Factory/example-project-matlab/buildexample-project-matlab@classAprivateprivate_method.m )
         """
 
         return Runtime.call("private_method", *args, **kwargs)
