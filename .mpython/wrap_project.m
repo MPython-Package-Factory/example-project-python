@@ -6,12 +6,15 @@ matlab_project_url  = 'https://github.com/MPython-Package-Factory/example-projec
 [~, matlab_project_name] = fileparts(matlab_project_url); 
 mpython_url = 'https://github.com/MPython-Package-Factory/mpython.git';
 
-[cpath, ~, ~] = fileparts(mfilename('fullpath'));
-python_package_path = fullfile(cpath, '..'); 
+[filedir, ~, ~] = fileparts(mfilename('fullpath'));
+python_package_path = fullfile(filedir, '..'); 
 
+oldpath = path; 
 restoredefaultpath; 
 
-cd(cpath);
+cpath = pwd; 
+
+cd(filedir);
 
 mkdir('external');
 cd('external');
@@ -30,8 +33,8 @@ end
 
 cd('..'); 
 
-addpath(fullfile(cpath, 'external', 'mpython'));
-addpath(fullfile(cpath, 'external', matlab_project_name));
+addpath(fullfile(filedir, 'external', 'mpython'));
+addpath(fullfile(filedir, 'external', matlab_project_name));
 
 mkdir('build'); 
 srcpath   = fullfile('external', matlab_project_name);
@@ -60,6 +63,8 @@ mpython_wrap( ...
     python_package_path, ...
     python_package_name, ...
     true, ...
-    fullfile(cpath, 'templates'))
+    fullfile(filedir, 'templates'))
 
+addpath(oldpath);
+cd(cpath); 
 end
